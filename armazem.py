@@ -1,4 +1,4 @@
-memoria = [0] * 16 
+memoria = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 def armazenar_valor(endereco, valor):
     memoria[endereco] = valor
