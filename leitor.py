@@ -1,6 +1,10 @@
 instrucoes = []
 nome_arquivo_entrada = 'cartao.in'
 
+def configurar_entrada(nome_arquivo_entrada):
+    arquivo_entrada = open(nome_arquivo_entrada, 'r')
+    return arquivo_entrada
+
 def ler_instrucao(nome_arquivo_entrada):
     with open(nome_arquivo_entrada, 'r') as arquivo:
         for instrucao in arquivo:
