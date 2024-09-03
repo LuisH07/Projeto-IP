@@ -3,13 +3,13 @@ import armazem
 import moinho
 import impressora
 
-def configurar():
-    arquivo_entrada = 'cartao.in'
-    arquivo_saida = 'cartao.out'
-    return arquivo_entrada, arquivo_saida
+def configurar(arquivo_entrada, arquivo_saida):
+    global nome_arquivo_entrada, nome_arquivo_saida
+    nome_arquivo_entrada = arquivo_entrada
+    nome_arquivo_saida = arquivo_saida
 
 def ligar_maquina():
-    execucoes = leitor.ler_inst(configurar()[0])
+    execucoes = leitor.ler_inst(nome_arquivo_entrada)
     impressoes = []
     for execucao in execucoes:
         execucao_bin = leitor.conv_bin(execucao)
@@ -34,6 +34,4 @@ def ligar_maquina():
         else:
             print(f'O código {codigo} é inválido')
     if impressoes != []:
-        impressora.gravar(configurar()[1], impressoes)
-
-ligar_maquina()
+        impressora.gravar(nome_arquivo_saida, impressoes)
