@@ -1,9 +1,10 @@
-''''num1 = 18
-bin_str1 = format(num1, '08b') # Converte para binário, 8 bits de comprimento
-print(f"O número {num1} em 8 bits é: {bin_str1}") # Saída: '10010
+def conv_int(valor):
+    valor_int = format(valor, '016b')
+    execucao_cod = valor_int.replace('0', 'O').replace('1', 'X')
+    execucao_espacada = execucao_cod[:4] + ' ' + execucao_cod[4:8] + ' ' + execucao_cod[8:12] + ' ' + execucao_cod[12:]
+    return execucao_espacada
 
-# String de bits
-bin_str2 = '00010010'
-# Converte a string de bits para um número inteiro
-num2 = int(bin_str2, 2)
-print(num2) # Saída: 18'''
+def gravar(arquivo_saida, textos):
+    arquivo_out = open(arquivo_saida, 'w')
+    for texto in textos:
+        arquivo_out.write(texto + '\n')

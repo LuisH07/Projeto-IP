@@ -1,7 +1,8 @@
-def ler_instrucoes(arquivo_entrada):
-    with open(arquivo_entrada, 'r') as arquivo:
-        instrucoes = arquivo.readlines()
-    return instrucoes
+def ler_inst(arquivo_entrada):
+    arquivo_in = open(arquivo_entrada, 'r')
+    execucoes = arquivo_in.readlines()
+    return execucoes
 
-def converter_binario(instrucao):
-    return instrucao.replace('X', '1').replace('O', '0').replace(' ', '')
+def conv_bin(execucao):
+    execucao = execucao.replace('O', '0').replace('X', '1').replace(' ', '')
+    return execucao
