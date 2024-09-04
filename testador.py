@@ -1,4 +1,4 @@
 import maquina
 
-maquina.configurar('cartao.in', 'resultadoatualizado')
+maquina.configurar('cartao.in', 'cartao.out')
 maquina.ligar_maquina()
