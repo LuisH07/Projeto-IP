@@ -1,4 +1,4 @@
 import maquina
 
-maquina.configurar('entrada4.txt', 'resultado4')
+maquina.configurar('cartao.in', 'cartao.out')
 maquina.ligar_maquina()
